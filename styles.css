@@ -1,41 +1,46 @@
-/* Make the entire page pink */
+/* Modern background with gradient */
 body {
     margin: 0;
     height: 100vh;
-    background-color: pink;
+    background: linear-gradient(135deg, #ff7eb9, #ff758c, #ff6a89, #ff6182);
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif; /* Modern font */
 }
 
-/* Center the container and add some spacing */
+/* Center the container and add spacing */
 .container {
     text-align: center;
 }
 
-/* Style the statement */
+/* Style the statement with a modern look */
 h1 {
-    font-size: 24px;
+    font-size: 28px;
     color: white;
     margin-bottom: 30px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); /* Subtle text shadow */
 }
 
-/* Center the buttons and make them bigger */
+/* Center the buttons and add a modern style */
 .btn {
     background-color: white;
     border: none;
-    padding: 25px 50px;
-    font-size: 22px; /* Increased font size */
-    margin: 20px;
+    padding: 20px 45px;
+    font-size: 20px;
+    margin: 15px;
     cursor: pointer;
-    border-radius: 10px;
-    transition: background-color 0.3s ease;
+    border-radius: 30px; /* Rounder buttons */
+    transition: all 0.3s ease;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Button shadow */
 }
 
-/* Add a hover effect to the buttons */
+/* Add a hover effect with a modern touch */
 .btn:hover {
-    background-color: lightgray;
+    background-color: #ff85a2;
+    color: white;
+    box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.2); /* Larger shadow on hover */
+    transform: translateY(-3px); /* Slight upward movement on hover */
 }
 
 /* Pop-up styles */
@@ -46,27 +51,36 @@ h1 {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6); /* Darker background for better contrast */
     justify-content: center;
     align-items: center;
 }
 
 .popup-content {
     background-color: white;
-    padding: 20px;
-    border-radius: 10px;
+    padding: 30px;
+    border-radius: 15px;
     text-align: center;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2); /* Pop-up shadow */
+    transform: scale(0.9); /* Slightly smaller scale initially */
+    transition: transform 0.3s ease; /* Smooth scale transition */
 }
 
+.popup-content.show {
+    transform: scale(1); /* Scale up to normal size when shown */
+}
+
+/* Close button with modern styling */
 .close-btn {
     margin-top: 20px;
-    padding: 10px 20px;
+    padding: 12px 25px;
     font-size: 18px;
     cursor: pointer;
     border: none;
-    border-radius: 5px;
-    background-color: pink;
+    border-radius: 25px;
+    background-color: #ff85a2;
     color: white;
+    transition: background-color 0.3s ease;
 }
 
 .close-btn:hover {
