@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pink Button Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="prompt">Will You Let Me Take You Out This Week?</h1>
+        <button class="btn" id="yesButton">YES!!</button>
+        <button class="btn" id="noButton">No:(</button>
+    </div>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <p id="popupText">Oops, can't say No!!</p>
+            <button class="close-btn" onclick="closePopup()">Close</button>
+        </div>
+    </div>
+
+    <script>
+        let noClickCount = 0;
+        let yesClickCount = 0;
+
+        // Function to display the pop-up
+        document.getElementById('noButton').onclick = function() {
+            noClickCount++;
+            if (noClickCount > 1) {
+                document.getElementById('prompt').innerText = "I keep asking until I take the YES";
+                document.getElementById('noButton').innerText = "Date?";
+                document.getElementById('popupText').innerText = "How about now? 😊";
+            }
+            document.getElementById('popup').style.display = 'block';
+        };
+
+
+        // Function for YES button
+        document.getElementById('yesButton').onclick = function() {
+            yesClickCount++;
+            if (yesClickCount > 1) {
+                alert("Okayyy Princess GOT IT!!");
+            } else {
+                alert("YESS!! Can't Wait!!");
+            }
+        };
+
+        // Function to close the pop-up
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
