@@ -11,6 +11,8 @@
         <h1 id="prompt">Will You Let Me Take You Out This Week?</h1>
         <button class="btn" id="yesButton">YES!!</button>
         <button class="btn" id="noButton">No:(</button>
+        <!-- New Prompt Below the Buttons -->
+        <p id="additionalPrompt" style="margin-top: 20px; font-size: 18px; color: white;">It's Pink cuz you love Pink!</p>
     </div>
 
     <div id="popup" class="popup">
@@ -34,7 +36,6 @@
             }
             document.getElementById('popup').style.display = 'block';
         };
-
 
         // Function for YES button
         document.getElementById('yesButton').onclick = function() {
